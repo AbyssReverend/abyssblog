@@ -1,0 +1,8 @@
+<%- include("partials/header.ejs") %>
+
+<h3>Essays</h3>
+
+<% for(let i = 0; i < posts.length; i++) { %>
+    <a class="essayTitles" href="<%= posts[i].postLink %>"><%= posts[i].postTitle %></a>
+<% } %>
+<%- include("partials/footer.ejs") %>

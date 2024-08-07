@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/submit" method="POST">
+    <input name="name" type="text" class="contact-input" placeholder="name/nickname" required/>
+    <br/>
+    <input name="email" type="text" class="contact-input" placeholder="email" required/>
+    <br/>
+    <input name="title" type="text" class="contact-input" placeholder="title" required/>
+    <br/>
+    <textarea name="text" class="feedback-input" placeholder="blogpost" maxlength="5000" required></textarea>
+    <br/>
+    <input id="submit-button" type="submit" value="submit" />
+</form>
+
+<% if(locals.submitted) { %>
+    <h4>blog post submitted successfully</h4>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
